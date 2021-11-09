@@ -24,9 +24,9 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
+      
       - name: YouTube-Videos-As-Posts
-        uses: SSanjeevi/YouTubeVideosAsPosts@Release0.1.0
+        uses: SSanjeevi/YouTubeVideosAsPosts@Release0.1.1
         with:
           GoogleApiKey: ${{ secrets.GoogleApiKey }}
           channelName: 'UCnYzqHl_und412jN2RTjJVA'
