@@ -26,7 +26,16 @@ jobs:
       - uses: actions/checkout@v2
       
       - name: YouTube-Videos-As-Posts
-        uses: SSanjeevi/YouTubeVideosAsPosts@Release0.1.1
+        uses: SSanjeevi/YouTubeVideosAsPosts@Release0.1.2
         with:
           GoogleApiKey: ${{ secrets.GoogleApiKey }}
           channelName: 'UCnYzqHl_und412jN2RTjJVA'
+      
+      - name: Commit and push update
+        run: |-
+          git config --global user.email "ssanjeevi.ss@gmail.com"
+          git config --global user.name "SSanjeevi"
+          git add -A
+          git commit -m "Updated Youtube channel page from GitHub Actions"
+          git push
+
